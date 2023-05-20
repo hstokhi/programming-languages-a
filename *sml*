@@ -1,0 +1,1922 @@
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:43.36-43.96 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z * 'Y -> 'Y
+  operand:         (string -> int) * string * 'X
+  in expression:
+    foldl ((fn x => String.size x),longest_string,string_list)
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+hw3.sml:56.1 Error: syntax error found at EOF
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.39-65.42
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:43.10-43.88 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: string * string
+  operand:         string
+  in expression:
+    (fn (x,y) => if String.size x > String.size y then x else y) ""
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:43.14-43.17 Error: non-constructor applied to argument in pattern: x
+hw3.sml:43.53 Error: unbound variable or constructor: y
+hw3.sml:43.36 Error: unbound variable or constructor: x
+hw3.sml:43.61 Error: unbound variable or constructor: x
+hw3.sml:43.68 Error: unbound variable or constructor: y
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:43.15-43.18 Error: non-constructor applied to argument in pattern: x
+hw3.sml:43.55 Error: unbound variable or constructor: y
+hw3.sml:43.38 Error: unbound variable or constructor: x
+hw3.sml:43.63 Error: unbound variable or constructor: x
+hw3.sml:43.70 Error: unbound variable or constructor: y
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:43.10-43.86 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: string * string
+  operand:         string
+  in expression:
+    (fn (x,y) => if String.size x > String.size y then x else y) ""
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val it = () : unit
+- longest_string2 ["abc", "cde", "f", "g"];
+val it = "cde" : string
+- longest_string1 ["abc", "cde", "f", "g"];
+val it = "abc" : string
+- 
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:52.13 Error: expression or pattern ends with infix identifier ">"
+hw3.sml:52.5-52.13 Error: operator is not a function [tycon mismatch]
+  operator: int
+  in expression:
+    (size x) >
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:52.13 Error: expression or pattern ends with infix identifier ">"
+hw3.sml:52.5-52.13 Error: operator is not a function [tycon mismatch]
+  operator: int
+  in expression:
+    (size x) >
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:40.28-40.61 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: (char -> bool) * ('Z -> char)
+  operand:         (char -> bool) * char
+  in expression:
+    Char.isUpper o String.sub (str,0)
+hw3.sml:50.13 Error: expression or pattern ends with infix identifier ">"
+hw3.sml:50.5-50.13 Error: operator is not a function [tycon mismatch]
+  operator: int
+  in expression:
+    (size x) >
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:50.13 Error: expression or pattern ends with infix identifier ">"
+hw3.sml:50.5-50.13 Error: operator is not a function [tycon mismatch]
+  operator: int
+  in expression:
+    (size x) >
+val it = () : unit
+- use "hw3.sml";
+[opening hw3.sml]
+hw3.sml:60.1 Error: syntax error found at EOF
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.39-65.42
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+hw3.sml:51.55 Error: syntax error: replacing  EQUALOP with  DARROW
+hw3.sml:53.55 Error: syntax error: replacing  EQUALOP with  DARROW
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.39-65.42
+- 
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:51.65-51.76 Error: unbound variable or constructor: string_list
+hw3.sml:53.66-53.77 Error: unbound variable or constructor: string_list
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val it = () : unit
+- longest_capitalized ["abc", "abcdefg", "A", "DEF"];
+val it = "DEF" : string
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val it = () : unit
+- rev_string "hakim"
+= ;
+val it = "mikah" : string
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:68.5-73.20 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: ('Z -> 'Y option) * 'Z list
+  object: 'Z list * 'X
+  in expression:
+    (case (arg,arg)
+    of (fxn,arg_list) =>
+         (case arg_list
+         of nil => raise NoAnswer
+          | x :: xs =>
+              (case (fxn x)
+              of NONE => first_argument xs
+               | SOME x => x)))
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:68.5-73.20 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: ('Z -> 'Y option) * 'Z list
+  object: 'Z list * 'X
+  in expression:
+    (case (arg,arg)
+    of (fxn,arg_list) =>
+         (case arg_list
+         of nil => raise NoAnswer
+          | x :: xs =>
+              (case (fxn x)
+              of NONE => first_argument xs
+               | SOME x => x)))
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:68.5-69.83 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: ('Z option -> ''Y option) * 'Z option list
+  object: (('Z option -> ''Y option) * 'Z option list) * 'X
+  in expression:
+    (case (arg,arg)
+    of (func,args) =>
+         if func (hd args) = NONE
+       then first_argument (func,tl args)
+       else valOf (hd args))
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:68.5-71.71 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: ('Z -> ''Y option) * 'Z list
+  object: (('Z -> ''Y option) * 'Z list) * 'X
+  in expression:
+    (case (arg,arg)
+    of (func,args) =>
+         (case args
+         of nil => raise NoAnswer
+          | x :: xs => if func x = NONE then first_argument (func,xs) else x))
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:68.5-71.73 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: ('Z -> ''Y option) * 'Z list
+  object: (('Z -> ''Y option) * 'Z list) * 'X
+  in expression:
+    (case (arg,arg)
+    of (func,args) =>
+         (case args
+         of nil => raise NoAnswer
+          | x :: xs => if func x = NONE then first_argument (func,xs) else x))
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:79.19-81.39 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z option -> 'Y option
+  this rule: 'Z option -> 'X list
+  in rule:
+    SOME y => ((helper func) xs) y @ acc
+hw3.sml:76.13-81.39 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z list -> 'Y list -> 'X list option
+  result type:  'Z list -> 'Y list -> 'Y list
+  in declaration:
+    helper =
+      (fn arg =>
+            (fn arg =>
+                  (fn arg =>
+                        (case (arg,arg,arg)
+                        of (<pat>,<pat>,<pat>) =>
+                             (case <exp>
+                             of <rule>
+                              | <rule>)))))
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:79.19-81.46 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z option -> 'Y option
+  this rule: 'Z option -> 'X list
+  in rule:
+    SOME y => ((helper func) xs) (SOME y) @ acc
+hw3.sml:76.13-81.46 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z list -> 'Y list -> 'X list option
+  result type:  'Z list -> 'W option -> 'Y list
+  in declaration:
+    helper =
+      (fn arg =>
+            (fn arg =>
+                  (fn arg =>
+                        (case (arg,arg,arg)
+                        of (<pat>,<pat>,<pat>) =>
+                             (case <exp>
+                             of <rule>
+                              | <rule>)))))
+hw3.sml:83.2-83.21 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z option
+  operand:         'Y list
+  in expression:
+    ((helper func) args) nil
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:83.24-83.27 Error: unbound variable or constructor: acc
+hw3.sml:79.19-81.46 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z option -> 'Y option
+  this rule: 'Z option -> 'X list
+  in rule:
+    SOME y => ((helper func) xs) (SOME y) @ acc
+hw3.sml:77.6-81.46 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z list -> 'Y list
+  this rule: 'Z list -> 'X option
+  in rule:
+    x :: xs =>
+      (case (func x)
+      of NONE => NONE
+       | SOME y => ((helper func) xs) (SOME y) @ acc)
+hw3.sml:76.13-81.46 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z list -> 'Y list -> 'Y list
+  result type:  'Z list -> 'X option -> 'Y list
+  in declaration:
+    helper =
+      (fn arg =>
+            (fn arg =>
+                  (fn arg =>
+                        (case (arg,arg,arg)
+                        of (<pat>,<pat>,<pat>) =>
+                             (case <exp>
+                             of <rule>
+                              | <rule>)))))
+hw3.sml:83.2-83.27 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z option
+  operand:         'Y -> 'Y option
+  in expression:
+    ((helper func) args) SOME
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:83.24-83.27 Error: unbound variable or constructor: acc
+hw3.sml:77.6-81.46 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z list -> 'Y list
+  this rule: 'Z list -> 'Y list option
+  in rule:
+    x :: xs =>
+      (case (func x)
+      of NONE => NONE
+       | SOME y => SOME (((helper func) xs) y @ acc))
+hw3.sml:83.2-83.27 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z list
+  operand:         'Y -> 'Y option
+  in expression:
+    ((helper func) args) SOME
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:77.6-81.46 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z list -> 'Y list
+  this rule: 'Z list -> 'Y list option
+  in rule:
+    x :: xs =>
+      (case (func x)
+      of NONE => NONE
+       | SOME y => SOME (((helper func) xs) y @ acc))
+hw3.sml:83.2-83.26 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z list
+  operand:         'Y -> 'Y option
+  in expression:
+    ((helper func) args) SOME
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:79.19-81.39 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z option -> 'Y option
+  this rule: 'Z option -> 'X list
+  in rule:
+    SOME y => ((helper func) xs) y @ acc
+hw3.sml:76.13-81.39 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z list -> 'Y list -> 'Y list option
+  result type:  'Z list -> 'Y list -> 'Y list
+  in declaration:
+    helper =
+      (fn arg =>
+            (fn arg =>
+                  (fn arg =>
+                        (case (arg,arg,arg)
+                        of (<pat>,<pat>,<pat>) =>
+                             (case <exp>
+                             of <rule>
+                              | <rule>)))))
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:79.19-81.44 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z option -> 'Y option
+  this rule: 'Z option -> 'X list
+  in rule:
+    SOME y => (((helper func) xs) SOME) y @ acc
+hw3.sml:76.13-81.44 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z list -> 'Y list -> 'Y list option
+  result type:  'Z list -> ('X -> 'X option) -> 'W -> 'Y list
+  in declaration:
+    helper =
+      (fn arg =>
+            (fn arg =>
+                  (fn arg =>
+                        (case (arg,arg,arg)
+                        of (<pat>,<pat>,<pat>) =>
+                             (case <exp>
+                             of <rule>
+                              | <rule>)))))
+hw3.sml:83.2-83.21 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z -> 'Z option
+  operand:         'Y list
+  in expression:
+    ((helper func) args) nil
+val it= () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:79.19-81.39 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z option -> 'Y option
+  this rule: 'Z option -> 'X list
+  in rule:
+    SOME y => ((helper func) xs) y @ acc
+hw3.sml:76.13-81.39 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z list -> 'Y list -> 'Y list option
+  result type:  'Z list -> 'Y list -> 'Y list
+  in declaration:
+    helper =
+      (fn arg =>
+            (fn arg =>
+                  (fn arg =>
+                        (case (arg,arg,arg)
+                        of (<pat>,<pat>,<pat>) =>
+                             (case <exp>
+                             of <rule>
+                              | <rule>)))))
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:79.19-81.41 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): 'Z option -> 'Y option
+  this rule: 'Z option -> 'X list
+  in rule:
+    _ => ((helper func) xs) (func x) @ acc
+hw3.sml:76.13-81.41 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z list -> 'Y list -> 'Y list option
+  result type:  'Z list -> 'X option -> 'Y list
+  in declaration:
+    helper =
+      (fn arg =>
+            (fn arg =>
+                  (fn arg =>
+                        (case (arg,arg,arg)
+                        of (<pat>,<pat>,<pat>) =>
+                             (case <exp>
+                             of <rule>
+                              | <rule>)))))
+hw3.sml:83.2-83.21 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z option
+  operand:         'Y list
+  in expression:
+    ((helper func) args) nil
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:79.19-81.49 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: 'Z option
+  object: 'Y list
+  in expression:
+    (case (func x)
+    of NONE => NONE
+     | SOME y => helper (func,xs,func x @ acc))
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val it = () : unit
+- all_answers (fn x => if x = 1 then SOME [x] else NONE) [2,3,4,5,6,7];
+val it = NONE : int list option
+- all_answers (fn x => if x > 2 then SOME [x] else NONE) [3,4,5,6,7,8];
+val it = SOME [8,7,6,5,4,3] : int list option
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val it = () : unit
+- all_answers (fn x => if x > 2 then SOME [x] else NONE) [3,4,5,6,7,8];
+val it = SOME [3,4,5,6,7,8] : int list option
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+hw3.sml:87.1 Error: syntax error found at EOF
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.39-65.42
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+hw3.sml:87.1 Error: syntax error found at EOF
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.39-65.42
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val it = () : unit
+- longest_capitalized ["Abc", "abcdefg", "Abc", "a"];
+val it = "Abc" : string
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val count_wildcards = fn : pattern -> int
+val it = () : unit
+- count_wildcards Wildcard Wildcard Wildcard;
+stdIn:2.1-2.43 Error: operator is not a function [tycon mismatch]
+  operator: int
+  in expression:
+    (count_wildcards Wildcard) Wildcard
+- count_wildcards [Wildcard, Wildcard, Wildcard];
+stdIn:1.2-2.32 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: pattern
+  operand:         pattern list
+  in expression:
+    count_wildcards (Wildcard :: Wildcard :: Wildcard :: nil)
+- g
+= ;
+val it = fn : (unit -> int) -> (string -> int) -> pattern -> int
+- count_wildcards (Wildcard, Wildcard);
+stdIn:4.1-4.37 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: pattern
+  operand:         pattern * pattern
+  in expression:
+    count_wildcards (Wildcard,Wildcard)
+- count_wildcards Wildcard;
+val it = 1 : int
+- count_wildcards Wildcard;
+val it = 1 : int
+- count_wildcards Wildcard;
+val it = 1 : int
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val count_wildcards = fn : pattern -> int
+val count_wildcards_and_variable_lengths = fn : pattern -> int
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val count_wildcards = fn : pattern -> int
+val count_wildcards_and_variable_lengths = fn : pattern -> int
+val count_some_var = fn : string * 'a -> pattern -> int
+val it = () : unit
+- count_some_var ("x", Variable("x"));
+val it = fn : pattern -> int
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val count_wildcards = fn : pattern -> int
+val count_wildcards_and_variable_lengths = fn : pattern -> int
+val count_some_var = fn : unit * 'a -> (string -> int) -> pattern -> int
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val count_wildcards = fn : pattern -> int
+val count_wildcards_and_variable_lengths = fn : pattern -> int
+val count_some_var = fn : string * pattern -> int
+val it = () : unit
+- count_some_var ("x", Variable("x"));
+val it = 1 : int
+- count_some_var("x", TupleP(Variable("x"), Variable("x")));
+stdIn:3.15-3.58 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: pattern list
+  operand:         pattern * pattern
+  in expression:
+    TupleP (Variable "x",Variable "x")
+- count_some_var("x", TupleP [Variable("x"), Variable("x")]);
+val it = 2 : int
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:97.22-97.28 Error: unbound variable or constructor: exists
+hw3.sml:99.2-99.23 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: bool
+  operand:         _ list -> bool
+  in expression:
+    not helper2
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:99.2-99.23 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: bool
+  operand:         ''Z list -> bool
+  in expression:
+    not helper2
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:97.60-97.67 Error: unbound variable or constructor: helper2
+hw3.sml:99.7-99.14 Error: unbound variable or constructor: helper2
+hw3.sml:99.2-99.25 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: bool
+  operand:         pattern -> _
+  in expression:
+    not (<errorvar> o helper1)
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:93.32-93.39 Error: unbound variable or constructor: helper1
+hw3.sml:92.44-92.51 Error: unbound variable or constructor: helper1
+hw3.sml:97.60-97.67 Error: unbound variable or constructor: helper2
+hw3.sml:99.2-99.30 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: bool
+  operand:         pattern -> bool
+  in expression:
+    not (has_repeats o var_list)
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:93.32-93.39 Error: unbound variable or constructor: helper1
+hw3.sml:92.44-92.51 Error: unbound variable or constructor: helper1
+hw3.sml:97.60-97.67 Error: unbound variable or constructor: helper2
+hw3.sml:99.2-99.30 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: bool
+  operand:         pattern -> bool
+  in expression:
+    not (has_repeats o var_list)
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:93.32-93.39 Error: unbound variable or constructor: helper1
+hw3.sml:92.44-92.51 Error: unbound variable or constructor: helper1
+hw3.sml:97.60-97.67 Error: unbound variable or constructor: helper2
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:97.45 Warning: calling polyEqual
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val count_wildcards = fn : pattern -> int
+val count_wild_and_variable_lengths = fn : pattern -> int
+val count_some_var = fn : string * pattern -> int
+val check_pat = fn : pattern -> bool
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:99.2-99.28 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: bool
+  operand:         ''Z list -> bool
+  in expression:
+    not has_repeats
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:99.3-99.18 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: bool
+  operand:         ''Z list -> bool
+  in expression:
+    not has_repeats
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:97.22-97.56 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: bool
+  operand:         ('Z -> bool) -> 'Z list -> bool
+  in expression:
+    not List.exists
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:97.22-97.56 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: bool
+  operand:         ('Z -> bool) -> 'Z list -> bool
+  in expression:
+    not List.exists
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:97.50 Warning: calling polyEqual
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_argument = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val count_wildcards = fn : pattern -> int
+val count_wild_and_variable_lengths = fn : pattern -> int
+val count_some_var = fn : string * pattern -> int
+val check_pat = fn : pattern -> bool
+val it = () : unit
+- check_pat TupleP [Variable ("x"), Variable ("s"), Variable("v")];
+stdIn:2.1-2.65 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: pattern
+  operand:         pattern list -> pattern
+  in expression:
+    check_pat TupleP
+- check_pat TupleP([Variable ("x"), Variable ("s"), Variable("v")]);
+stdIn:1.2-2.51 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: pattern
+  operand:         pattern list -> pattern
+  in expression:
+    check_pat TupleP
+- check_pat (TupleP [Variable ("x"), Variable ("s"), Variable("v")]);
+val it = true : bool
+- check_pat (TupleP [Variable ("x"), Variable ("s"), Variable("x")]);
+val it = false : bool
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3_extrapractice.sml";
+[opening hw3_extrapractice.sml]
+hw3_extrapractice.sml:4.14-4.43 Error: test expression in if is not of type bool [tycon mismatch]
+  test expression: 'Z option
+  in expression:
+    if NONE then NONE else SOME x
+hw3_extrapractice.sml:4.54-4.83 Error: test expression in if is not of type bool [tycon mismatch]
+  test expression: 'Z option
+  in expression:
+    if NONE then NONE else SOME y
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3_extrapractice.sml";
+[opening hw3_extrapractice.sml]
+val compose_opt = fn
+  : ('a -> 'b option option) -> ('c -> 'a option) -> 'c -> 'b option
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3_extrapractice.sml";
+[opening hw3_extrapractice.sml]
+val compose_opt = fn
+  : ('a -> 'b option option) -> ('c -> 'a option) -> 'c -> 'b option
+val do_until = fn : ('a -> 'a) -> (('a -> 'a) -> 'a -> bool) -> 'a -> 'a
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3_extrapractice.sml"
+= ;
+[opening hw3_extrapractice.sml]
+val compose_opt = fn
+  : ('a -> 'b option option) -> ('c -> 'a option) -> 'c -> 'b option
+val do_until = fn : ('a -> 'a) -> ('a -> bool) -> 'a -> 'a
+val it = () : unit
+- 
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3_extrapractice.sml";
+[opening hw3_extrapractice.sml]
+hw3_extrapractice.sml:22.21 Error: unbound variable or constructor: x
+hw3_extrapractice.sml:22.15-22.19 Error: unbound variable or constructor: fun2
+hw3_extrapractice.sml:22.9-22.13 Error: unbound variable or constructor: fun1
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3_extrapractice.sml";
+[opening hw3_extrapractice.sml]
+val compose_opt = fn
+  : ('a -> 'b option option) -> ('c -> 'a option) -> 'c -> 'b option
+val do_until = fn : ('a -> 'a) -> ('a -> bool) -> 'a -> 'a
+val factorial = fn : int -> int
+val it = () : unit
+- factorial 5
+= ;
+
+uncaught exception Overflow [overflow]
+  raised at: <file hw3_extrapractice.sml>
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3-ep.sml
+= ";
+stdIn:1.6-1.17 Error: unclosed string
+- 
+- use "hw3-ep.sml";
+[opening hw3-ep.sml]
+val compose_opt = fn
+  : ('a -> 'b option option) -> ('c -> 'a option) -> 'c -> 'b option
+val do_until = fn : ('a -> 'a) -> ('a -> bool) -> 'a -> 'a
+val factorial = fn : int -> int
+val it = () : unit
+- factorial 5
+= ;
+val it = 0 : int
+- 
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3-ep.sml";
+[opening hw3-ep.sml]
+val compose_opt = fn
+  : ('a -> 'b option option) -> ('c -> 'a option) -> 'c -> 'b option
+val do_until = fn : ('a -> 'a) -> ('a -> bool) -> 'a -> 'a
+val factorial = fn : int -> int
+val it = () : unit
+- factorial 5;
+
+uncaught exception Overflow [overflow]
+  raised at: <file hw3-ep.sml>
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:108.35-108.43 Error: unbound variable or constructor: zip in path List.zip
+hw3.sml:102.17-114.16 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): valu * pattern -> (string * valu) list option
+  this rule: valu * valu -> (string * valu) list option
+  in rule:
+    (Constructor (s1,v),Constructor (s2,p)) =>
+      if s1 = s2 then match (v,p) else NONE
+w3.sml:102.5-114.16 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  pattern -> (string * valu) list option
+  result type:  (string * valu) list option
+  in declaration:
+    match =
+      (fn arg =>
+            (fn arg =>
+                  (case (arg,arg)
+                  of (v,p) =>
+                       (case (v,p)
+                       of (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | _ => NONE))))
+hw3.sml:116.72-116.91 Error: operator is not a function [tycon mismatch]
+  operator: (string * valu) list option
+  in expression:
+    (match value) pattern
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml';
+= ;
+stdIn:1.6-1.16 Error: unclosed string
+- ";
+= ;
+stdIn:1.2-1.4 Error: unclosed string
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:112.14-112.25 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: valu * pattern
+  operand:         valu * valu
+  in expression:
+    match (v,p)
+hw3.sml:102.17-114.16 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): valu * pattern -> (string * valu) list option
+  this rule: valu * valu -> _
+  in rule:
+    (Constructor (s1,v),Constructor (s2,p)) =>
+      if s1 = s2 then match (v,p) else NONE
+hw3.sml:102.5-114.16 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: valu * pattern
+  object: (valu * pattern) * 'Z
+  in expression:
+    (case (arg,arg)
+    of (v,p) =>
+         (case (v,p)
+         of (_,Wildcard) => SOME nil
+          | (v,Variable x) => SOME ((x,v) :: nil)
+          | (Unit,UnitP) => SOME nil
+          | (Const x,ConstP y) => if x = y then SOME nil else NONE
+          | (Tuple vs,TupleP ps) =>
+              if List.length vs = List.length ps
+            then (all_answers match) (ListPair.zip (vs,ps))
+            else NONE
+          | (Constructor (s1,v),Constructor (s2,p)) =>
+              if s1 = s2 then match (v,p) else NONE
+          | _ => NONE))
+hw3.sml:102.5-114.16 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z -> _
+  result type:  (string * valu) list option
+  in declaration:
+    match =
+      (fn arg =>
+            (fn arg =>
+                  (case (arg,arg)
+                  of (v,p) =>
+                       (case (v,p)
+                       of (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | _ => NONE))))
+hw3.sml:116.72-116.91 Error: operator is not a function [tycon mismatch]
+  operator: (string * valu) list option
+  in expression:
+    (match value) pattern
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:112.14-112.27 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: valu * pattern
+  operand:         valu * valu
+  in expression:
+    match (cv,cp)
+hw3.sml:102.17-114.16 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): valu * pattern -> (string * valu) list option
+  this rule: valu * valu -> _
+  in rule:
+    (Constructor (s1,cv),Constructor (s2,cp)) =>
+      if s1 = s2 then match (cv,cp) else NONE
+hw3.sml:102.5-114.16 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: valu * pattern
+  object: (valu * pattern) * 'Z
+  in expression:
+    (case (arg,arg)
+    of (v,p) =>
+         (case (v,p)
+         of (_,Wildcard) => SOME nil
+          | (sv,Variable sp) => SOME ((sp,sv) :: nil)
+          | (Unit,UnitP) => SOME nil
+          | (Const x,ConstP y) => if x = y then SOME nil else NONE
+          | (Tuple vs,TupleP ps) =>
+              if List.length vs = List.length ps
+            then (all_answers match) (ListPair.zip (vs,ps))
+            else NONE
+          | (Constructor (s1,cv),Constructor (s2,cp)) =>
+              if s1 = s2 then match (cv,cp) else NONE
+          | _ => NONE))
+hw3.sml:102.5-114.16 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z -> _
+  result type:  (string * valu) list option
+  in declaration:
+    match =
+      (fn arg =>
+            (fn arg =>
+                  (case (arg,arg)
+                  of (v,p) =>
+                       (case (v,p)
+                       of (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | _ => NONE))))
+hw3.sml:116.72-116.91 Error: operator is not a function [tycon mismatch]
+  operator: (string * valu) list option
+  in expression:
+    (match value) pattern
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml';
+= ";
+stdIn:1.6-1.16 Error: unclosed string
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:112.14-112.27 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: valu * pattern
+  operand:         valu * valu
+  in expression:
+    match (cv,cp)
+hw3.sml:102.17-114.21 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): valu * pattern -> (string * valu) list option
+  this rule: valu * valu -> _
+  in rule:
+    (Constructor (s1,cv),Constructor (s2,cp)) =>
+      if s1 = s2 then match (cv,cp) else NONE
+hw3.sml:102.5-114.21 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: valu * pattern
+  object: (valu * pattern) * 'Z
+  in expression:
+    (case (arg,arg)
+    of (v,p) =>
+         (case (v,p)
+         of (_,Wildcard) => SOME nil
+          | (sv,Variable sp) => SOME ((sp,sv) :: nil)
+          | (Unit,UnitP) => SOME nil
+          | (Const x,ConstP y) => if x = y then SOME nil else NONE
+          | (Tuple vs,TupleP ps) =>
+              if List.length vs = List.length ps
+            then (all_answers match) (ListPair.zip (vs,ps))
+            else NONE
+          | (Constructor (s1,cv),Constructor (s2,cp)) =>
+              if s1 = s2 then match (cv,cp) else NONE
+          | (_,_) => NONE))
+hw3.sml:102.5-114.21 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z -> _
+  result type:  (string * valu) list option
+  in declaration:
+    match =
+      (fn arg =>
+            (fn arg =>
+                  (case (arg,arg)
+                  of (v,p) =>
+                       (case (v,p)
+                       of (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => NONE))))
+hw3.sml:116.72-116.91 Error: operator is not a function [tycon mismatch]
+  operator: (string * valu) list option
+  in expression:
+    (match value) pattern
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:103.5-115.21 Error: case object and rules do not agree [tycon mismatch]
+  rule domain: valu * pattern
+  object: (valu * pattern) * 'Z
+  in expression:
+    (case (arg,arg)
+    of (v,p) =>
+         (case (v,p)
+         of (_,Wildcard) => SOME nil
+          | (sv,Variable sp) => SOME ((sp,sv) :: nil)
+          | (Unit,UnitP) => SOME nil
+          | (Const x,ConstP y) => if x = y then SOME nil else NONE
+          | (Tuple vs,TupleP ps) =>
+              if List.length vs = List.length ps
+            then (all_answers match) (ListPair.zip (vs,ps))
+            else NONE
+          | (Constructor (s1,cv),ConstructorP (s2,cp)) =>
+              if s1 = s2 then match (cv,cp) else NONE
+          | (_,_) => NONE))
+hw3.sml:103.5-115.21 Error: right-hand-side of clause does not agree with function result type [tycon mismatch]
+  expression:  'Z -> _
+  result type:  (string * valu) list option
+  in declaration:
+    match =
+      (fn arg =>
+            (fn arg =>
+                  (case (arg,arg)
+                  of (v,p) =>
+                       (case (v,p)
+                       of (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => SOME <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => if <exp> then <exp> else <exp>
+                        | (<pat>,<pat>) => NONE))))
+hw3.sml:117.72-117.91 Error: operator is not a function [tycon mismatch]
+  operator: (string * valu) list option
+  in expression:
+    (match value) pattern
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:117.72-117.91 Error: operator is not a function [tycon mismatch]
+  operator: (string * valu) list option
+  in expression:
+    (match value) pattern
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+hw3.sml:120.1 Error: syntax error found at EOF
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.39-65.42
+- 
+
+Process sml finished
+Standard ML of New Jersey (64-bit) v110.99.3 [built: Thu Jul 28 00:35:16 2022]
+- use "hw3.sml";
+[opening hw3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+hw3.sml:98.50 Warning: calling polyEqual
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_answer = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val count_wildcards = fn : pattern -> int
+val count_wild_and_variable_lengths = fn : pattern -> int
+val count_some_var = fn : string * pattern -> int
+val check_pat = fn : pattern -> bool
+val match = fn : valu * pattern -> (string * valu) list option
+val first_match = fn : valu -> pattern list -> (string * valu) list option
+val it = () : unit
+- first_match Unit [UnitP];
+val it = SOME [] : (string * valu) list option
+- match (Const(1), UnitP);
+val it = NONE : (string * valu) list option
+- 

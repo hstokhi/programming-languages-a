@@ -1,0 +1,5 @@
+(*Week 4 - Extra Practice Problems*)
+
+fun compose_opt f g x =
+    (fn x => if NONE then NONE else SOME x) (fn y => if NONE then NONE else SOME y)
+    

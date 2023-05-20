@@ -1,0 +1,9 @@
+Syntax:
+	e1 < e2
+
+Type Check:
+     e1 and e2 must have same type. cannot be bool
+
+Evaluation:
+	assign e1 to v1 and e2 to v2. v1 must be less than v2
+     
